@@ -13,7 +13,7 @@ public class SubActivity3 extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tab2_view2);
+        setContentView(R.layout.tab2_view3);
     }
 
 }
