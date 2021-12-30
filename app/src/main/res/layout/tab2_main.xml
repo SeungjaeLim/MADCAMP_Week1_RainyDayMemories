@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tab2_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="200dp"
     tools:context=".Tab2.Frag2">
 
-    <androidx.gridlayout.widget.GridLayout
-        android:id="@+id/Grid"
+
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:columnCount="2"
-        app:rowCount="3">
+        android:columnCount="2"
+        android:rowCount="3">
+
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/man1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
-            app:cardElevation="0dp"
-            app:layout_column="0"
-            app:layout_columnWeight="1"
-            app:layout_gravity="fill"
-            app:layout_row="0"
-            app:layout_rowWeight="1">
+            app:cardElevation="0dp">
 
             <LinearLayout
-                android:id="@+id/linlayout_man1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
@@ -36,38 +37,34 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/man1_img"
+                    android:id="@+id/imageView"
                     android:layout_width="160dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    tools:src="@tools:sample/avatars" />
+                    android:scaleType="centerCrop" />
 
                 <TextView
-                    android:id="@+id/man1_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="공유"
+                    android:text="CATS"
                     android:textAlignment="center"
-                    android:textSize="24sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/man2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
-            app:cardElevation="0dp"
-            app:layout_column="1"
-            app:layout_columnWeight="1"
-            app:layout_gravity="fill"
-            app:layout_row="0"
-            app:layout_rowWeight="1">
+            app:cardElevation="0dp">
 
             <LinearLayout
-                android:id="@+id/linlayout_man2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
@@ -75,38 +72,34 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/man2_img"
+                    android:id="@+id/imageView2"
                     android:layout_width="160dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    tools:src="@tools:sample/avatars" />
+                    android:scaleType="centerCrop" />
 
                 <TextView
-                    android:id="@+id/man2_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="박서준"
+                    android:text="MAN2"
                     android:textAlignment="center"
-                    android:textSize="24sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/man3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
-            app:cardElevation="0dp"
-            app:layout_column="0"
-            app:layout_columnWeight="1"
-            app:layout_gravity="fill"
-            app:layout_row="1"
-            app:layout_rowWeight="1">
+            app:cardElevation="0dp">
 
             <LinearLayout
-                android:id="@+id/linlayout_man3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
@@ -114,39 +107,34 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/man3_img"
+                    android:id="@+id/imageView3"
                     android:layout_width="160dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    tools:src="@tools:sample/avatars" />
+                    android:scaleType="centerCrop" />
 
                 <TextView
-                    android:id="@+id/man3_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="서강준"
+                    android:text="MAN3"
                     android:textAlignment="center"
-                    android:textSize="24sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/man4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
-            app:cardElevation="0dp"
-            app:layout_column="1"
-            app:layout_columnWeight="1"
-            app:layout_gravity="fill"
-            app:layout_row="1"
-            app:layout_rowWeight="1">
+            app:cardElevation="0dp">
 
             <LinearLayout
-                android:id="@+id/linlayout_man4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
@@ -154,37 +142,34 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/man4_img"
+                    android:id="@+id/imageView4"
                     android:layout_width="160dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    tools:src="@tools:sample/avatars" />
+                    android:scaleType="centerCrop" />
 
                 <TextView
-                    android:id="@+id/man4_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="MAN4"
                     android:textAlignment="center"
-                    android:textSize="24sp"
-                    android:text="강준서" />
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/man5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
             android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
-            app:cardElevation="0dp"
-            app:layout_column="0"
-            app:layout_columnWeight="1"
-            app:layout_gravity="fill"
-            app:layout_row="2"
-            app:layout_rowWeight="1">
+            app:cardElevation="0dp">
 
             <LinearLayout
-                android:id="@+id/linlayout_man5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
@@ -192,59 +177,24 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/man5_img"
+                    android:id="@+id/imageView"
                     android:layout_width="160dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    tools:src="@tools:sample/avatars" />
+                    android:scaleType="centerCrop" />
 
                 <TextView
-                    android:id="@+id/man5_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="MAN1"
                     android:textAlignment="center"
-                    android:textSize="24sp"
-                    android:text="김김김" />
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/man6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="0dp"
-            app:layout_column="1"
-            app:layout_columnWeight="1"
-            app:layout_gravity="fill"
-            app:layout_row="2"
-            app:layout_rowWeight="1">
 
-            <LinearLayout
-                android:id="@+id/linlayout_man6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:gravity="center"
-                android:orientation="vertical">
+    </GridLayout>
 
-                <ImageView
-                    android:id="@+id/man6_img"
-                    android:layout_width="160dp"
-                    android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    tools:src="@tools:sample/avatars" />
 
-                <TextView
-                    android:id="@+id/man6_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:textSize="24sp"
-                    android:text="박박박" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-    </androidx.gridlayout.widget.GridLayout>
 </RelativeLayout>
+
