@@ -2,7 +2,7 @@ package com.example.spring_rain_with_who.Tab0;
 
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -11,14 +11,9 @@ import android.view.ViewGroup;
 
 import com.example.spring_rain_with_who.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Frag0#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class Frag0 extends Fragment {
 
-    @Nullable
+    @NonNull
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

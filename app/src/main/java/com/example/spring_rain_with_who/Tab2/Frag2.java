@@ -11,11 +11,6 @@ import android.view.ViewGroup;
 
 import com.example.spring_rain_with_who.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Frag2#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class Frag2 extends Fragment {
 
     @NonNull

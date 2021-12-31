@@ -2,84 +2,51 @@ package com.example.spring_rain_with_who.Tab1;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
+
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.Toast;
-
-import androidx.fragment.app.Fragment;
 
 import com.example.spring_rain_with_who.R;
 
-//외부에서 new Frag1 호출 시
+import java.util.ArrayList;
+
 public class Frag1 extends Fragment {
-    private static final String TAG = "Frag1";
 
-    Fragment contactFragment;
-    EditText inputName;
-    EditText inputPhonenumber;
-    Context context;
+    private ArrayList<Item> items = new ArrayList<>();
 
-    public static ItemDatabase itemDatabase = null;
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v=inflater.inflate(R.layout.tab1_add,container,false);
-
-        contactFragment = new ContactFragment();
-
-        getChildFragmentManager().beginTransaction().replace(R.id.container,contactFragment).commit();
-        ImageButton saveButton = v.findViewById(R.id.addbutton);
-        inputName = v.findViewById(R.id.inputname);
-        inputPhonenumber = v.findViewById(R.id.inputphonenumber);
-        saveButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                String name = inputName.getText().toString();
-                String phonenumber = inputPhonenumber.getText().toString();
-
-                String n_a= String.format("이름: %.4s     |      연락처: %.13s",name,phonenumber);
-                String sqlSave = "insert into " + ItemDatabase.TABLE_ITEM + " (PHONENUMBER) values (" +
-                        "'"+n_a+"')";
-
-                ItemDatabase database = ItemDatabase.getInstance(context);
-                database.execSQL(sqlSave);
-
-                inputName.setText("");
-                inputPhonenumber.setText("");
-
-                Toast.makeText(view.getContext(),"Add",Toast.LENGTH_SHORT).show();
-
-            }
-        });
-        openDatabase();
-        return v;
+    public Frag1() {
+        // Required empty public constructor
     }
 
-    public void openDatabase() {
-        if (itemDatabase != null) {
-            itemDatabase.close();
-            itemDatabase = null;
-        }
-
-        itemDatabase = ItemDatabase.getInstance(getActivity());
-        boolean isOpen = ItemDatabase.open();
-        if (isOpen) {
-            Log.d(TAG, "Item database is open.");
-        } else {
-            Log.d(TAG, "Item database is not open.");
-        }
-    }
     @Override
-    public void onDestroy() {
-        super.onDestroy();
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
 
-        if (itemDatabase != null) {
-            itemDatabase.close();
-            itemDatabase = null;
-        }
+        View view = inflater.inflate(R.layout.tab1_main, container, false);
+
+        initDataset();
+
+        Context context = view.getContext();
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(context);
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(layoutManager);
+
+        ItemAdapter adapter = new ItemAdapter(context, items);
+        recyclerView.setAdapter(adapter);
+
+        return view;
+    }
+
+    private void initDataset(){
+        items.clear();
+        items.add(new Item("강준서", "000-0000-0000", R.drawable.ic_launcher_foreground));
+        items.add(new Item("임승재", "111-1111-1111", R.drawable.ic_launcher_foreground));
     }
 }
