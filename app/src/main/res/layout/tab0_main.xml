@@ -43,7 +43,7 @@
             android:fontFamily="@font/imcresoojin"
             android:text="Daejon"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"
+            android:textSize="20sp"
             tools:layout_alignParentBottom="false" />
 
         <TextView
@@ -55,7 +55,7 @@
             android:fontFamily="@font/imcresoojin"
             android:text="12.5 C"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"
+            android:textSize="20sp"
             tools:layout_alignParentBottom="false" />
 
         <TextView
@@ -67,7 +67,7 @@
             android:fontFamily="@font/imcresoojin"
             android:text="Cloudy"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"
+            android:textSize="20sp"
             tools:layout_alignParentBottom="false" />
     </LinearLayout>
 
