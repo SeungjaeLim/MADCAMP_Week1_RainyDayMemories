@@ -8,8 +8,8 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie"
-        android:layout_width="420dp"
-        android:layout_height="502dp"
+        android:layout_width="425dp"
+        android:layout_height="454dp"
         android:layout_marginTop="50sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -17,15 +17,21 @@
 
     <TextView
         android:id="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@id/lottie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        android:fontFamily="@font/imcresoojin"
+        android:gravity="center"
+        android:text="비 오는 날, 추억 한 꼬집"
+        android:textColor="@color/royalblue"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:text="잠시만 기다려 주세요..."
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:layout_marginTop="50sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lottie"
+        app:layout_constraintVertical_bias="0.287" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

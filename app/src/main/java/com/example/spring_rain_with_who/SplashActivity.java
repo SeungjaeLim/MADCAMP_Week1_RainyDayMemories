@@ -1,10 +1,8 @@
 package com.example.spring_rain_with_who;
 
-import android.animation.Animator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,31 +22,8 @@ public class SplashActivity  extends AppCompatActivity {
         textView = findViewById(R.id.textView);
         animationView = findViewById(R.id.lottie);
         animationView.setAnimation("loading.json");
+        animationView.loop(true);
         animationView.playAnimation();
-        animationView.setRepeatCount(2);
-
-        animationView.addAnimatorListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                animationView.setVisibility(View.GONE);
-                textView.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-
-            }
-        });
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {

@@ -41,7 +41,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/imcresoojin"
-            android:text="Daejon"
+            android:text=""
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             tools:layout_alignParentBottom="false" />
@@ -53,7 +53,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/imcresoojin"
-            android:text="12.5 C"
+            android:text=""
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             tools:layout_alignParentBottom="false" />
@@ -65,7 +65,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/imcresoojin"
-            android:text="Cloudy"
+            android:text=""
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             tools:layout_alignParentBottom="false" />
