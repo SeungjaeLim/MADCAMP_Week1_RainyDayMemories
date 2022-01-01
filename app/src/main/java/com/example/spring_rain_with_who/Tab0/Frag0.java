@@ -2,7 +2,10 @@ package com.example.spring_rain_with_who.Tab0;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 
@@ -11,6 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,7 +46,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -54,11 +60,14 @@ public class Frag0 extends Fragment implements OnMapReadyCallback {
 
     private MapView mapView = null;
     FusedLocationProviderClient client;
-
+    Context ct;
     double _lat, _long;
 
     TextView weatherView;
     TextView tempView;
+    TextView cityView;
+
+    String city = "daejeon";
 
     static RequestQueue requestQueue;
 
@@ -80,9 +89,11 @@ public class Frag0 extends Fragment implements OnMapReadyCallback {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View layout = inflater.inflate(R.layout.tab0_main, container, false);
+        ct = container.getContext();
         ImageButton button = layout.findViewById(R.id.imageButton);
         weatherView = layout.findViewById(R.id.weatherView);
         tempView = layout.findViewById(R.id.tempView);
+        cityView = layout.findViewById(R.id.cityView);
 
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -104,6 +115,7 @@ public class Frag0 extends Fragment implements OnMapReadyCallback {
             //Request permission
             requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 44);
         }
+
 
         return layout;
     }
@@ -129,7 +141,22 @@ public class Frag0 extends Fragment implements OnMapReadyCallback {
                             //Initialize lat lng
                             LatLng latLng_current = new LatLng(_lat, _long);
 
+                            final Geocoder geocoder = new Geocoder(ct);
+                            List<Address> address = null;
 
+                            try {
+                                address = geocoder.getFromLocation(_lat, _long, 1);
+                            }
+                            catch(IOException e)
+                            {
+                                e.printStackTrace();
+                            }
+                            if(!address.isEmpty())
+                            {
+                                city = address.get(0).getAdminArea();
+                            }
+                            cityView.setText(city);
+                            CurrentWeatherCall();
                             //Create marker options
                             MarkerOptions user = new MarkerOptions().position(latLng_current).title("you are here");
                             //Zoom map
@@ -161,8 +188,7 @@ public class Frag0 extends Fragment implements OnMapReadyCallback {
 
     private void CurrentWeatherCall(){
         String apikey = "cafd431dd6e47ced531ef159c7432e07";
-        String city = "daejeon";
-        String url = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=cafd431dd6e47ced531ef159c7432e07";
+        String url = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+apikey;
         StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @SuppressLint("SetTextI18n")
             @Override
