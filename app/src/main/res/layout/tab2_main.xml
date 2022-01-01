@@ -40,15 +40,16 @@
                     android:id="@+id/imageView1"
                     android:layout_width="160dp"
                     android:layout_height="160dp"
-                    android:src="@drawable/icon_fish"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/spring_tree" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" "
+                    android:text="Spring"
+                    android:fontFamily="@font/imcresoojin"
                     android:textAlignment="center"
-                    android:textSize="15sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -76,15 +77,16 @@
                     android:id="@+id/imageView2"
                     android:layout_width="160dp"
                     android:layout_height="160dp"
-                    android:src="@drawable/icon_fish"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/summer_tree" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" "
+                    android:text="Summer"
+                    android:fontFamily="@font/imcresoojin"
                     android:textAlignment="center"
-                    android:textSize="15sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -112,15 +114,16 @@
                     android:id="@+id/imageView3"
                     android:layout_width="160dp"
                     android:layout_height="160dp"
-                    android:src="@drawable/icon_fish"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/fall_tree" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" "
+                    android:text="Autumn"
+                    android:fontFamily="@font/imcresoojin"
                     android:textAlignment="center"
-                    android:textSize="15sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -148,15 +151,16 @@
                     android:id="@+id/imageView4"
                     android:layout_width="160dp"
                     android:layout_height="160dp"
-                    android:src="@drawable/icon_fish"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/winter_tree" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=" "
+                    android:text="Winter"
+                    android:fontFamily="@font/imcresoojin"
                     android:textAlignment="center"
-                    android:textSize="15sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
