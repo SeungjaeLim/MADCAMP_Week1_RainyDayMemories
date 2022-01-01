@@ -1,10 +1,14 @@
 package com.example.spring_rain_with_who.Tab0;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -22,13 +26,18 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.spring_rain_with_who.R;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -44,12 +53,14 @@ import java.util.Map;
 public class Frag0 extends Fragment implements OnMapReadyCallback {
 
     private MapView mapView = null;
+    FusedLocationProviderClient client;
+
+    double _lat, _long;
 
     TextView weatherView;
     TextView tempView;
 
     static RequestQueue requestQueue;
-
 
     public Frag0()
     {
@@ -82,10 +93,71 @@ public class Frag0 extends Fragment implements OnMapReadyCallback {
         });
 
         mapView = (MapView) layout.findViewById(R.id.map);
-        mapView.getMapAsync(this);
+        client = LocationServices.getFusedLocationProviderClient(getActivity());
+
+        if(ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
+            //when permission granted
+            //call method
+            getCurrentLocation();
+        }else{
+            //When permission denied
+            //Request permission
+            requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 44);
+        }
 
         return layout;
     }
+
+    private void getCurrentLocation() {
+        //Initialize task location
+        @SuppressLint("MissingPermission") Task<Location> task = client.getLastLocation();
+        task.addOnSuccessListener(new OnSuccessListener<Location>() {
+            @Override
+            public void onSuccess(Location location) {
+                //When success
+                if(location!=null){
+                    //Sync map
+                    mapView.getMapAsync(new OnMapReadyCallback() {
+                        @Override
+                        public void onMapReady(GoogleMap googleMap) {
+                            googleMap.clear();
+
+                            //Get lat long numbers
+                            _lat = location.getLatitude();
+                            _long = location.getLongitude();
+
+                            //Initialize lat lng
+                            LatLng latLng_current = new LatLng(_lat, _long);
+
+
+                            //Create marker options
+                            MarkerOptions user = new MarkerOptions().position(latLng_current).title("you are here");
+                            //Zoom map
+                            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng_current, 17));
+                            //Add marker on map
+                            googleMap.addMarker(user);
+                        }
+                    });
+                }
+            }
+        });
+    }
+
+    private void deleteMarker() {
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull @NotNull String[] permissions, @NonNull @NotNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == 44) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                //When permission granted
+                //Call method
+                getCurrentLocation();
+            }
+        }
+    }
+
 
     private void CurrentWeatherCall(){
         String apikey = "cafd431dd6e47ced531ef159c7432e07";
