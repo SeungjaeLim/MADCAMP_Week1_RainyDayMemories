@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
 
         tabLayout.setupWithViewPager(viewPager);
-        tabLayout.getTabAt(0).setText("A");
-        tabLayout.getTabAt(1).setText("B");
-        tabLayout.getTabAt(2).setText("C");
+        tabLayout.getTabAt(0).setText("오늘");
+        tabLayout.getTabAt(1).setText("연락처");
+        tabLayout.getTabAt(2).setText("추억");
     }
 }

@@ -10,77 +10,78 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="407dp"
-        android:layout_height="134dp"
-        android:layout_above="@+id/map"
-        android:layout_alignTop="@+id/tempView"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_above="@id/map"
+        android:layout_alignTop="@id/map"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:src="@color/powderblue"
+        android:background="@drawable/weather_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="0dp" />
 
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageButton">
+
+        <TextView
+            android:id="@+id/cityView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/imcresoojin"
+            android:text="Daejon"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            tools:layout_alignParentBottom="false" />
+
+        <TextView
+            android:id="@+id/tempView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/imcresoojin"
+            android:text="12.5 C"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            tools:layout_alignParentBottom="false" />
+
+        <TextView
+            android:id="@+id/weatherView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/imcresoojin"
+            android:text="Cloudy"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            tools:layout_alignParentBottom="false" />
+    </LinearLayout>
+
     <com.google.android.gms.maps.MapView
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.MapFragment"
         android:layout_width="0dp"
-        android:layout_height="599dp"
+        android:layout_height="0dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="134dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/tempView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="64dp"
-        android:gravity="center_vertical"
-        android:text="Temp"
-        android:textColor="#000000"
-        android:textSize="42sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/weatherView"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:textAllCaps="true" />
-
-    <TextView
-        android:id="@+id/weatherView"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="36dp"
-        android:text="WEATHER"
-        android:textColor="#000000"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_alignParentBottom="false"
-        tools:layout_editor_absoluteY="78dp" />
-
-    <TextView
-        android:id="@+id/cityView"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="CITY"
-        android:textColor="#000000"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
