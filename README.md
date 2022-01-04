@@ -17,7 +17,7 @@
 ##  Main
 > 다양한 기능을 편하게 사용하기 위해 만든 스와이프 가능한 탭 구조
 
-  <img src="https://user-images.githubusercontent.com/74184274/148015530-e1a3ecb3-c4e4-49d5-a460-f81cf34509f2.jpg" width="225" height="400">
+  <img src="https://user-images.githubusercontent.com/74184274/148017933-60d06651-20dc-404c-9957-f22b8f26c475.jpg" width="225" height="400">
   
    - `MainActivity.java`에서 `ViewPager`에 `TabLayout`을 적용하여 스와이프 가능한 탭 구조로 `Fragment`를 보여줍니다.
 
