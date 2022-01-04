@@ -13,9 +13,9 @@
         <!--프로필 사진-->
         <ImageView
             android:id="@+id/profile"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@mipmap/ic_launcher_round"/>
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/rain"/>
 
         <!--이름-->
         <TextView
