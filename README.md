@@ -1,6 +1,6 @@
 
 # 비 오는 날, 추억 한 꼬집
-> 갑자기 내리는 비를 소중한 추억으로
+> 비도 오고 그래서 네 생각이 났어
 <img src="https://user-images.githubusercontent.com/74184274/148008895-5a1ff8ec-9dfa-4667-abbe-2a9ec57b6edf.png" width="300" height="300">
 
 |오늘|연락처|추억|
@@ -38,7 +38,7 @@
       - OpenWeatherMap API에 역지오코딩 값을 이용해 현 위치의 날씨와 기온을 `json`으로 받아와 나타냅니다. 
 
 ## Tab2 : 연락처
-> N1으로 우산을 들고 올 친구는 누가 있을지 확인할 수 있어요
+> 우산을 들고 데리러 올 친구를 찾아보세요
   <img src = "https://user-images.githubusercontent.com/96764875/148022098-41489716-c8d7-4134-962b-9d08db74b76d.jpg" width = "225" height = "400" >
   
   - 기기에 저장되어있는 친구들의 연락처를 확인할 수 있습니다.
