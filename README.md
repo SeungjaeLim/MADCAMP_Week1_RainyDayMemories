@@ -1,6 +1,6 @@
 
 # 비 오는 날, 추억 한 꼬집
-> 비도 오고 그래서 네 생각이 났어   
+> 비도 오고 그래서 네 생각이 났어
 <br/>
 <img src="https://user-images.githubusercontent.com/74184274/148008895-5a1ff8ec-9dfa-4667-abbe-2a9ec57b6edf.png" width="300" height="300">
 <br/>
