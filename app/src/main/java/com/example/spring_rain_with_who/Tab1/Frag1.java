@@ -100,7 +100,7 @@ public class Frag1 extends Fragment {
             }
 
             Item FI = new Item();
-            FI.setResourceId(R.mipmap.ic_launcher_round);
+            FI.setResourceId(R.drawable.rain);
             FI.setPhone(phonenumber);
             FI.setName(contactCursor.getString(2));
 
