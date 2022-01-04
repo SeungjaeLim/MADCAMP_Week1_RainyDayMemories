@@ -1,5 +1,5 @@
 
-# 비 오는 날, 추억 한 꼬집 by 강준서, 임승재
+# 비 오는 날, 추억 한 꼬집
 > 갑자기 내리는 비를 소중한 추억으로
 <img src="https://user-images.githubusercontent.com/74184274/148008895-5a1ff8ec-9dfa-4667-abbe-2a9ec57b6edf.png" width="300" height="300">
 
@@ -63,11 +63,13 @@
 |<img src="https://user-images.githubusercontent.com/74184274/148015534-bbdce00e-97cf-465a-b12d-9a4f1696fef7.jpg" width="225" height="400">|<img src="https://user-images.githubusercontent.com/74184274/148015535-b0aae00c-62f5-41d5-a782-e0ac29cbe6a7.jpg" width="225" height="400">|<img src = "https://user-images.githubusercontent.com/74184274/148015538-e097451b-3c09-47c5-a918-fd9685ed89fe.jpg" width = "225" height = "400">|<img src = "https://user-images.githubusercontent.com/74184274/148015536-f4027028-8a37-4573-afb3-faa4999ea962.jpg" width = "225" height = "400">|
    - 초기에는 아무 사진도 저장되어 있지 않습니다.
    - 추억 남기기 버튼을 이용해 갤러리에서 사진을 가져오는 화면으로 넘어가세요.
+      -  `onClick()`에서 앨범으로 이동하여 `intent`를 가져옵니다.
 ### 갤러리 사진 불러오기
   <img src = "https://user-images.githubusercontent.com/74184274/148010908-37a421cd-2c28-4335-9797-841c3d1363f3.jpg" width = "225" height = "400">
   
    - 사진을 선택해 1장에서 10장까지 불러오세요.
    - 기존 사진이 있을 경우 왼쪽으로 추가됩니다.
+      - 불러온 사진은 `onActivityResulat()`로 돌아와 `ArrayList`에 `uri`로 저장되어 `MultiImageAdapter`에 전달합니다.
   
 ### 추억 저장
 |Spring|Summer|Autumn|Winter|
@@ -75,6 +77,7 @@
 |<img src="https://user-images.githubusercontent.com/74184274/148010910-40c96973-4f62-44bd-895e-d66222f59464.jpg" width="225" height="400">|<img src="https://user-images.githubusercontent.com/74184274/148010911-71ded0d9-ed1c-47b4-a76a-5a8341671362.jpg" width="225" height="400">|<img src = "https://user-images.githubusercontent.com/74184274/148010912-f44aa7df-ac52-418c-82c9-730b3bec9c56.jpg" width = "225" height = "400">|<img src = "https://user-images.githubusercontent.com/74184274/148010913-bdfd281b-5cff-4176-bc8c-8d017a6668ac.jpg" width = "225" height = "400">|
    - 추억이 남긴 사진을 스크롤하여 추억하세요.
    - 계절별로 사진을 저장해 추억할 수 있습니다.
+      - `RecylerView`에 `ImageView`를 적용해 스크롤 되는 갤러리를 구현하였습니다.
   
   
 ##  Credit
