@@ -79,8 +79,9 @@ public class Frag1 extends Fragment {
                 ContactsContract.CommonDataKinds.Phone.CONTACT_ID, // 연락처 ID -> 사진 정보 가져오는데 사용
                 ContactsContract.CommonDataKinds.Phone.NUMBER,        // 연락처
                 ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME}; // 연락처 이름.
+        String sortOrder = ContactsContract.Contacts.DISPLAY_NAME + " COLLATE LOCALIZED ASC";
 
-        Cursor contactCursor = getActivity().getContentResolver().query(uri,projection, null, null, null);
+        Cursor contactCursor = getActivity().getContentResolver().query(uri,projection, null, null, sortOrder);
 
         ArrayList<Item> contactlist = new ArrayList<Item>();
 
