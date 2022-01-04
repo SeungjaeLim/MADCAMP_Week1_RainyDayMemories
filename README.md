@@ -53,6 +53,7 @@
 
 ## Tab2 : 연락처
 > 우산을 들고 데리러 올 친구를 찾아보세요
+### 전화번호부
   <img src = "https://user-images.githubusercontent.com/96764875/148022098-41489716-c8d7-4134-962b-9d08db74b76d.jpg" width = "225" height = "400" >
   
   - 기기에 저장되어있는 친구들의 연락처를 확인할 수 있습니다.
