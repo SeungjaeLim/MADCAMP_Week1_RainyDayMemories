@@ -5,7 +5,7 @@
 
 |오늘|연락처|추억|
 |--|--|--|
-|<img src="https://user-images.githubusercontent.com/74184274/148011164-2d5610b6-35ff-4d28-90e7-2ffe5bcf2859.jpg" width="225" height="400">|<img src="https://.jpg" width="190" height="400">|<img src = "https://user-images.githubusercontent.com/74184274/148010914-d404b7ce-ea9a-4edd-b6e2-18a01a7dce90.jpg" width = "225" height = "400">|
+|<img src="https://user-images.githubusercontent.com/74184274/148011164-2d5610b6-35ff-4d28-90e7-2ffe5bcf2859.jpg" width="225" height="400">|<img src = "https://user-images.githubusercontent.com/96764875/148022098-41489716-c8d7-4134-962b-9d08db74b76d.jpg" width = "225" height = "400">|<img src = "https://user-images.githubusercontent.com/74184274/148010914-d404b7ce-ea9a-4edd-b6e2-18a01a7dce90.jpg" width = "225" height = "400">| 
 
 ##  Splash
 > 비 오는 날, 감성을 자극하는 인트로
@@ -37,17 +37,15 @@
       - Geocoder를 이용하여 위도, 경도 값을 바탕으로 역지오코딩해 도시의 이름을 저장합니다.
       - OpenWeatherMap API에 역지오코딩 값을 이용해 현 위치의 날씨와 기온을 `json`으로 받아와 나타냅니다. 
 
-## Tab2 : !
-> !
-> !
-> ### !
-  <img src = "https://.jpg" width = "190" height = "400" >
+## Tab2 : 연락처
+> N1으로 우산을 들고 올 친구는 누가 있을지 확인할 수 있어요
+  <img src = "https://user-images.githubusercontent.com/96764875/148022098-41489716-c8d7-4134-962b-9d08db74b76d.jpg" width = "190" height = "400" >
   
-  - !
-  - !
-  - !
-  - !
-  - !
+  - 기기에 저장되어있는 친구들의 연락처를 확인할 수 있습니다.
+
+      - 기기의 연락처에 접근할 수 있는 권한을 부여하여 정보를 받아옵니다.
+      - 오름차순으로 `Item` 객체에 저장하여 `ArrayList<Item>`에 저장합니다.
+      - 이 `Item`은 `RecyclerView`에 넣어서 볼 수 있게 했습니다.
 
 ## Tab3 : 추억
 > 비오는 날의 기억을 간직하고 싶은 추억으로 남기세요
@@ -69,7 +67,7 @@
   
    - 사진을 선택해 1장에서 10장까지 불러오세요.
    - 기존 사진이 있을 경우 왼쪽으로 추가됩니다.
-      - 불러온 사진은 `onActivityResulat()`로 돌아와 `ArrayList`에 `uri`로 저장되어 `MultiImageAdapter`에 전달합니다.
+      - 불러온 사진은 `onActivityResult()`로 돌아와 `ArrayList`에 `uri`로 저장되어 `MultiImageAdapter`에 전달합니다.
   
 ### 추억 저장
 |Spring|Summer|Autumn|Winter|
@@ -81,7 +79,7 @@
   
   
 ##  Credit
-  > Junseo Kang / 몰?루   
+  > Junseo Kang / pointjunseo@dgist.ac.kr   
   > Seungjae Lim / seungjaelim@kaist.ac.kr
 
 
