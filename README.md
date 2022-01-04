@@ -24,7 +24,7 @@
 ##  Tab1 : 오늘
 > "나 지금 N1이야, 비오는데 데리러 와 줄 수 있어?" 
 
-- ### 현 위치, 오늘 기온과 날씨
+### 현 위치, 오늘 기온과 날씨
   
   <img src="https://user-images.githubusercontent.com/74184274/148011164-2d5610b6-35ff-4d28-90e7-2ffe5bcf2859.jpg" width="225" height="400"> 
   
@@ -40,7 +40,7 @@
 ## Tab2 : !
 > !
 > !
-- ### !
+> ### !
   <img src = "https://.jpg" width = "190" height = "400" >
   
   - !
@@ -51,23 +51,34 @@
 
 ## Tab3 : 추억
 > 비오는 날의 기억을 간직하고 싶은 추억으로 남기세요
-- ### 사계절 앨범
+### 사계절 앨범
   <img src = "https://user-images.githubusercontent.com/74184274/148010914-d404b7ce-ea9a-4edd-b6e2-18a01a7dce90.jpg" width = "225" height = "400">
   
   - 비오는 날의 풍경, 데리러 와준 고마운 사람과의 추억을 계절별로 정리하세요.
        - `GridLayout`에 `CardView`를 적용해 `SubActivity`를 호출하여 앨범을 구현하였습니다.
 
-- ### 초기 화면
+### 초기 화면
 |Spring|Summer|Autumn|Winter|
 |--|--|--|--|
 |<img src="https://user-images.githubusercontent.com/74184274/148015534-bbdce00e-97cf-465a-b12d-9a4f1696fef7.jpg" width="225" height="400">|<img src="https://user-images.githubusercontent.com/74184274/148015535-b0aae00c-62f5-41d5-a782-e0ac29cbe6a7.jpg" width="225" height="400">|<img src = "https://user-images.githubusercontent.com/74184274/148015538-e097451b-3c09-47c5-a918-fd9685ed89fe.jpg" width = "225" height = "400">|<img src = "https://user-images.githubusercontent.com/74184274/148015536-f4027028-8a37-4573-afb3-faa4999ea962.jpg" width = "225" height = "400">|
-
-- ### 갤러리 사진 불러오기
+   - 초기에는 아무 사진도 저장되어 있지 않습니다.
+   - 추억 남기기 버튼을 이용해 갤러리에서 사진을 가져오는 화면으로 넘어가세요.
+### 갤러리 사진 불러오기
   <img src = "https://user-images.githubusercontent.com/74184274/148010908-37a421cd-2c28-4335-9797-841c3d1363f3.jpg" width = "225" height = "400">
-
-- ### 추억 저장
+  
+   - 사진을 선택해 1장에서 10장까지 불러오세요.
+   - 기존 사진이 있을 경우 왼쪽으로 추가됩니다.
+  
+### 추억 저장
 |Spring|Summer|Autumn|Winter|
 |--|--|--|--|
 |<img src="https://user-images.githubusercontent.com/74184274/148010910-40c96973-4f62-44bd-895e-d66222f59464.jpg" width="225" height="400">|<img src="https://user-images.githubusercontent.com/74184274/148010911-71ded0d9-ed1c-47b4-a76a-5a8341671362.jpg" width="225" height="400">|<img src = "https://user-images.githubusercontent.com/74184274/148010912-f44aa7df-ac52-418c-82c9-730b3bec9c56.jpg" width = "225" height = "400">|<img src = "https://user-images.githubusercontent.com/74184274/148010913-bdfd281b-5cff-4176-bc8c-8d017a6668ac.jpg" width = "225" height = "400">|
+   - 추억이 남긴 사진을 스크롤하여 추억하세요.
+   - 계절별로 사진을 저장해 추억할 수 있습니다.
+  
+  
+##  Credit
+  > Junseo Kang / 몰?루   
+  > Seungjae Lim / seungjaelim@kaist.ac.kr
 
 
