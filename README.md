@@ -1,11 +1,25 @@
 
 # 비 오는 날, 추억 한 꼬집
-> 비도 오고 그래서 네 생각이 났어
+> 비도 오고 그래서 네 생각이 났어   
+<br/>
 <img src="https://user-images.githubusercontent.com/74184274/148008895-5a1ff8ec-9dfa-4667-abbe-2a9ec57b6edf.png" width="300" height="300">
+<br/>
+
+#### 우산을 들고 다니면 귀찮은데...
+#### 일기예보를 보더라도 우산 있으면 걸리적거리는데...
+#### 우산을 들고 다니지 않으면 되지 않을까?
+<br/>
 
 |오늘|연락처|추억|
 |--|--|--|
 |<img src="https://user-images.githubusercontent.com/74184274/148011164-2d5610b6-35ff-4d28-90e7-2ffe5bcf2859.jpg" width="225" height="400">|<img src = "https://user-images.githubusercontent.com/96764875/148022098-41489716-c8d7-4134-962b-9d08db74b76d.jpg" width = "225" height = "400">|<img src = "https://user-images.githubusercontent.com/74184274/148010914-d404b7ce-ea9a-4edd-b6e2-18a01a7dce90.jpg" width = "225" height = "400">| 
+
+<br/>
+
+#### 소나기의 불편한 기억을 간직하고 싶은 추억으로,
+#### 우산을 들고 데리러 나와줄 사람과 새로운 추억을 남겨보세요.
+
+<br/>
 
 ##  Splash
 > 비 오는 날, 감성을 자극하는 인트로
@@ -32,10 +46,10 @@
   - 날씨 확인을 통해 나가기 10분 전, 미리 데리러 오도록 연락할 수 있습니다.
   - 기온 확인을 통해 데리러 오는 친구에게 "오늘 춥다, 따뜻하게 입고 나와" 한마디 건네는건 어떨까요?
   
-      - Google Maps API의 `MapView`를 이용해 지도를 보여줍니다.
+      - `Google Maps API`의 `MapView`를 이용해 지도를 보여줍니다.
       - `getLastLocation()`를 통해 현재 위치를 받아오고, 이를 지도에 표시합니다.
-      - Geocoder를 이용하여 위도, 경도 값을 바탕으로 역지오코딩해 도시의 이름을 저장합니다.
-      - OpenWeatherMap API에 역지오코딩 값을 이용해 현 위치의 날씨와 기온을 `json`으로 받아와 나타냅니다. 
+      - `Geocoder`를 이용하여 위도, 경도 값을 바탕으로 역지오코딩해 도시의 이름을 저장합니다.
+      - `OpenWeatherMap API`에 역지오코딩 값을 이용해 현 위치의 날씨와 기온을 `json`으로 받아와 나타냅니다. 
 
 ## Tab2 : 연락처
 > 우산을 들고 데리러 올 친구를 찾아보세요
