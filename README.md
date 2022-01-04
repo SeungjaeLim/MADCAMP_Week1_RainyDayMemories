@@ -17,7 +17,7 @@
 ##  Main
 > 다양한 기능을 편하게 사용하기 위해 만든 스와이프 가능한 탭 구조
 
-  <img src="." width="225" height="400">
+  <img src="https://user-images.githubusercontent.com/74184274/148015530-e1a3ecb3-c4e4-49d5-a460-f81cf34509f2.jpg" width="225" height="400">
   
    - `MainActivity.java`에서 `ViewPager`에 `TabLayout`을 적용하여 스와이프 가능한 탭 구조로 `Fragment`를 보여줍니다.
 
@@ -51,18 +51,23 @@
 
 ## Tab3 : 추억
 > 비오는 날의 기억을 간직하고 싶은 추억으로 남기세요
-
-<br />
-
 - ### 사계절 앨범
-  <img src = "https://.jpg" width = "190" height = "400">
-
-  - !
-  - !
-  - !
+  <img src = "https://user-images.githubusercontent.com/74184274/148010914-d404b7ce-ea9a-4edd-b6e2-18a01a7dce90.jpg" width = "225" height = "400">
+  
+  - 비오는 날의 풍경, 데리러 와준 고마운 사람과의 추억을 계절별로 정리하세요.
+       - `GridLayout`에 `CardView`를 적용해 `SubActivity`를 호출하여 앨범을 구현하였습니다.
 
 - ### 초기 화면
-  <img src = "!.jpg" width="190" height="400">
+|Spring|Summer|Autumn|Winter|
+|--|--|--|--|
+|<img src="https://user-images.githubusercontent.com/74184274/148015534-bbdce00e-97cf-465a-b12d-9a4f1696fef7.jpg" width="225" height="400">|<img src="https://user-images.githubusercontent.com/74184274/148015535-b0aae00c-62f5-41d5-a782-e0ac29cbe6a7.jpg" width="225" height="400">|<img src = "https://user-images.githubusercontent.com/74184274/148015538-e097451b-3c09-47c5-a918-fd9685ed89fe.jpg" width = "225" height = "400">|<img src = "https://user-images.githubusercontent.com/74184274/148015536-f4027028-8a37-4573-afb3-faa4999ea962.jpg" width = "225" height = "400">|
 
-  - !
+- ### 갤러리 사진 불러오기
+  <img src = "https://user-images.githubusercontent.com/74184274/148010908-37a421cd-2c28-4335-9797-841c3d1363f3.jpg" width = "225" height = "400">
+
+- ### 추억 저장
+|Spring|Summer|Autumn|Winter|
+|--|--|--|--|
+|<img src="https://user-images.githubusercontent.com/74184274/148010910-40c96973-4f62-44bd-895e-d66222f59464.jpg" width="225" height="400">|<img src="https://user-images.githubusercontent.com/74184274/148010911-71ded0d9-ed1c-47b4-a76a-5a8341671362.jpg" width="225" height="400">|<img src = "https://user-images.githubusercontent.com/74184274/148010912-f44aa7df-ac52-418c-82c9-730b3bec9c56.jpg" width = "225" height = "400">|<img src = "https://user-images.githubusercontent.com/74184274/148010913-bdfd281b-5cff-4176-bc8c-8d017a6668ac.jpg" width = "225" height = "400">|
+
 
