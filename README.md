@@ -1,6 +1,12 @@
 
 # 비 오는 날, 추억 한 꼬집
 > 비도 오고 그래서 네 생각이 났어
+
+<p>
+  <img src="https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=Android&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=Java&logoColor=white"/>
+</p>
+
 <br/>
 <img src="https://user-images.githubusercontent.com/74184274/148008895-5a1ff8ec-9dfa-4667-abbe-2a9ec57b6edf.png" width="300" height="300">
 <br/>
