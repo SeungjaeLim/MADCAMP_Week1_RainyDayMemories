@@ -8,13 +8,9 @@
 </p>
 
 <br/>
-<img src="https://user-images.githubusercontent.com/74184274/148008895-5a1ff8ec-9dfa-4667-abbe-2a9ec57b6edf.png" width="300" height="300">
+<img src="https://user-images.githubusercontent.com/74184274/148008895-5a1ff8ec-9dfa-4667-abbe-2a9ec57b6edf.png" width="100" height="100">
 <br/>
 
-#### 우산을 들고 다니면 귀찮은데...
-#### 일기예보를 보더라도 우산 있으면 걸리적거리는데...
-#### 우산을 들고 다니지 않으면 되지 않을까?
-<br/>
 
 |오늘|연락처|추억|
 |--|--|--|
@@ -22,8 +18,6 @@
 
 <br/>
 
-#### 소나기의 불편한 기억을 간직하고 싶은 추억으로,
-#### 우산을 들고 데리러 나와줄 사람과 새로운 추억을 남겨보세요.
 
 <br/>
 
